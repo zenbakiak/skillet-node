@@ -1,4 +1,4 @@
-# @skillet/node
+# @zenbakiak/skillet-node
 
 Node.js bindings for the Skillet micro expression language, powered by Rust and napi-rs.
 
@@ -10,7 +10,7 @@ Node.js bindings for the Skillet micro expression language, powered by Rust and 
 ## Install
 
 ```bash
-npm install @skillet/node
+npm install @zenbakiak/skillet-node
 ```
 
 This package ships prebuilds via `@napi-rs/cli`. If you are building locally from source:
@@ -26,7 +26,7 @@ npm run build
 The simplest way to use Skillet is with the unified `evaluate` function, which automatically chooses the optimal evaluation method:
 
 ```javascript
-import { evaluate } from '@skillet/node'
+import { evaluate } from '@zenbakiak/skillet-node'
 
 // Simple formulas
 const result = await evaluate('= 2 + 3 * 4')
@@ -42,7 +42,7 @@ console.log(total) // 15
 Skillet supports standard mathematical operations and built-in functions:
 
 ```javascript
-import { evaluate } from '@skillet/node'
+import { evaluate } from '@zenbakiak/skillet-node'
 
 // Arithmetic operations
 await evaluate('= 10 + 5 * 2')        // 20
@@ -62,7 +62,7 @@ await evaluate('= ROUND(3.14159, 2)') // 3.14
 Use the `:variable` syntax to reference values passed as the second parameter:
 
 ```javascript
-import { evaluate } from '@skillet/node'
+import { evaluate } from '@zenbakiak/skillet-node'
 
 // Single variables
 const price = await evaluate('= :cost * 1.08', { cost: 100 })
@@ -90,7 +90,7 @@ console.log(summary) // 137.5
 Register your own functions that can be called from formulas:
 
 ```javascript
-import { evaluate, registerJsFunction, unregisterFunction } from '@skillet/node'
+import { evaluate, registerJsFunction, unregisterFunction } from '@zenbakiak/skillet-node'
 
 // Register a simple function
 registerJsFunction('DOUBLE', function(args, argsArray, resolve) {

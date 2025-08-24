@@ -1,5 +1,5 @@
 {
-  "name": "@skillet/node",
+  "name": "@zenbakiak/skillet-node",
   "version": "0.0.2",
   "description": "Node.js bindings for the Skillet micro expression language",
   "license": "MIT",
@@ -30,9 +30,14 @@
     "@napi-rs/cli": "^2.16.0"
   },
   "devDependencies": {
-    "vitest": "^1.6.0"
+    "vitest": "^3.2.4"
   },
   "engines": {
     "node": ">=16"
+  },
+  "optionalDependencies": {
+    "@zenbakiak/skillet-node-win32-x64-msvc": "0.0.2",
+    "@zenbakiak/skillet-node-darwin-x64": "0.0.2",
+    "@zenbakiak/skillet-node-linux-x64-gnu": "0.0.2"
   }
 }
