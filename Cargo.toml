@@ -1,0 +1,29 @@
+[package]
+name = "skillet-node"
+version = "0.0.2"
+edition = "2021"
+publish = false
+description = "Node.js bindings for the Skillet micro expression language (via napi-rs)"
+
+[lib]
+name = "skillet_node"
+crate-type = ["cdylib"]
+
+[package.metadata.napi]
+name = "skillet_node"
+compat-mode = true
+
+[dependencies]
+napi = { version = "2", features = ["napi6", "serde-json", "tokio_rt"] }
+napi-derive = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+once_cell = "1"
+
+# During local development, depend on the parent crate via a path.
+# When moving this to its own repository, replace with a crates.io version like:
+# skillet = "=0.0.1"
+skillet = "0.0.2"
+
+[build-dependencies]
+napi-build = "2"

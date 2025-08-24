@@ -1,0 +1,38 @@
+{
+  "name": "@skillet/node",
+  "version": "0.0.2",
+  "description": "Node.js bindings for the Skillet micro expression language",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zenbakiak/skillet-node"
+  },
+  "author": "zenbakiak - JC Mercado <jc@zenbakiak.com>",
+  "main": "wrapper.js",
+  "types": "wrapper.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "wrapper.js",
+    "wrapper.d.ts",
+    "example-usage.js",
+    "README.md",
+    "skillet_node.*.node",
+    "skillet_node.node"
+  ],
+  "scripts": {
+    "build": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "pretest": "npm run build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@napi-rs/cli": "^2.16.0"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
