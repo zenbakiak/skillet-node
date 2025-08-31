@@ -1,14 +1,14 @@
 import { describe, it, expect } from 'vitest'
-import { evalFormula, evalFormulaWith, evalFormulaWithCustom, registerJsFunction, unregisterFunction, evaluate } from '..'
+import { evaluate, registerJsFunction, unregisterFunction } from '..'
 
-describe('skillet-node basic', () => {
-  it('evaluates simple expression', () => {
-    const r = evalFormula('= 2 + 3 * 4')
+describe('skillet-node using evaluate function', () => {
+  it('evaluates simple expression', async () => {
+    const r = await evaluate('= 2 + 3 * 4')
     expect(r).toBe(14)
   })
 
-  it('evaluates with variables', () => {
-    const r = evalFormulaWith('=SUM(:a, :b)', { a: 10, b: 5 })
+  it('evaluates with variables', async () => {
+    const r = await evaluate('=SUM(:a, :b)', { a: 10, b: 5 })
     expect(r).toBe(15)
   })
 
@@ -19,7 +19,7 @@ describe('skillet-node basic', () => {
       const firstArg = Array.isArray(argsArray) ? argsArray[0] : 0
       resolve(Number(firstArg) + 5)
     }, 1, 1)
-    const r = await evalFormulaWithCustom('=ADD5(:n)', { n: 37 })
+    const r = await evaluate('=ADD5(:n)', { n: 37 })
     expect(r).toBe(42)
   })
 })

@@ -1,6 +1,6 @@
 [package]
 name = "skillet-node"
-version = "0.0.2"
+version = "0.0.7"
 edition = "2021"
 publish = false
 description = "Node.js bindings for the Skillet micro expression language (via napi-rs)"

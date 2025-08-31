@@ -213,6 +213,29 @@ Values are returned as plain JavaScript types:
 
 For functions returning JSON, the binding attempts to parse JSON strings automatically.
 
+## Next.js Configuration
+
+For Next.js projects, you may need to configure webpack to handle the native module properly. Create or update your `next.config.js`:
+
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    serverComponentsExternalPackages: ['@zenbakiak/skillet-node']
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push('@zenbakiak/skillet-node')
+    }
+    return config
+  },
+}
+
+module.exports = nextConfig
+```
+
+Alternatively, you can copy the complete `next.config.js` from this package.
+
 ## Example File
 
 See `example-usage.js` in this package for a complete working example demonstrating all features.

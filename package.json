@@ -1,8 +1,19 @@
 {
   "name": "@zenbakiak/skillet-node",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "Node.js bindings for the Skillet micro expression language",
   "license": "MIT",
+  "keywords": [
+    "skillet",
+    "node",
+    "excel",
+    "formula",
+    "evaluator",
+    "expression",
+    "language",
+    "rust",
+    "napi-rs"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zenbakiak/skillet-node"
@@ -16,9 +27,9 @@
     "wrapper.js",
     "wrapper.d.ts",
     "example-usage.js",
+    "next.config.js",
     "README.md",
-    "skillet_node.*.node",
-    "skillet_node.node"
+    "*.node"
   ],
   "scripts": {
     "build": "napi build --platform",
@@ -36,8 +47,8 @@
     "node": ">=16"
   },
   "optionalDependencies": {
-    "@zenbakiak/skillet-node-win32-x64-msvc": "0.0.2",
-    "@zenbakiak/skillet-node-darwin-x64": "0.0.2",
-    "@zenbakiak/skillet-node-linux-x64-gnu": "0.0.2"
+    "@zenbakiak/skillet-node-win32-x64-msvc": "0.0.7",
+    "@zenbakiak/skillet-node-darwin-x64": "0.0.7",
+    "@zenbakiak/skillet-node-linux-x64-gnu": "0.0.7"
   }
 }
