@@ -1,6 +1,6 @@
 {
   "name": "@zenbakiak/skillet-node",
-  "version": "0.0.7",
+  "version": "0.1.1",
   "description": "Node.js bindings for the Skillet micro expression language",
   "license": "MIT",
   "keywords": [
@@ -47,8 +47,8 @@
     "node": ">=16"
   },
   "optionalDependencies": {
-    "@zenbakiak/skillet-node-win32-x64-msvc": "0.0.7",
-    "@zenbakiak/skillet-node-darwin-x64": "0.0.7",
-    "@zenbakiak/skillet-node-linux-x64-gnu": "0.0.7"
+    "@zenbakiak/skillet-node-win32-x64-msvc": "0.1.1",
+    "@zenbakiak/skillet-node-darwin-x64": "0.1.1",
+    "@zenbakiak/skillet-node-linux-x64-gnu": "0.1.1"
   }
 }

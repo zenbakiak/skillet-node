@@ -468,9 +468,9 @@ checksum = "0fda2ff0d084019ba4d7c6f371c95d8fd75ce3524c3cb8fb653a3023f6323e64"
 
 [[package]]
 name = "skillet"
-version = "0.0.2"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc1519771fd706547a069f4b91890d9edf8b1f8eff1e1229a6803ccae9cbfaf0"
+checksum = "00655e46b795fe5a16dfc869d4501278438a0d6d6ec51ba5615c9699918af441"
 dependencies = [
  "chrono",
  "lazy_static",
@@ -481,7 +481,7 @@ dependencies = [
 
 [[package]]
 name = "skillet-node"
-version = "0.0.7"
+version = "0.1.1"
 dependencies = [
  "napi",
  "napi-build",
